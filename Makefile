@@ -6,11 +6,11 @@
 #    By: vfurmane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:23:33 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/04 11:39:38 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/04 12:23:25 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= $(addprefix ft_, memset.c)
+SRCS		= $(addprefix ft_, bzero.c memset.c)
 OBJS		= $(SRCS:.c=.o)
 INCL		= .
 NAME		= libft.a
