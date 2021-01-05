@@ -6,7 +6,7 @@
 /*   By: vfurmane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 17:54:57 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/05 18:02:17 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 int		ft_atoi(const char *str);
 void	*ft_bzero(void *str, size_t len);
+void	*ft_calloc(size_t len, size_t size);
 int		ft_isalnum(int chr);
 int		ft_isalpha(int chr);
 int		ft_isascii(int chr);
