@@ -6,11 +6,11 @@
 #    By: vfurmane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:23:33 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/04 15:44:20 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/05 10:46:25 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= $(addprefix ft_, bzero.c memccpy.c memchr.c memcmp.c memcpy.c \
+SRCS		= $(addprefix ft_, atoi.c bzero.c memccpy.c memchr.c memcmp.c memcpy.c \
 			  memmove.c memset.c)
 OBJS		= $(SRCS:.c=.o)
 INCL		= .
