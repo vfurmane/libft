@@ -6,13 +6,13 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:14:39 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/04 13:25:22 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/05 10:39:50 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, size_t len)
+void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
 	int	i;
 
