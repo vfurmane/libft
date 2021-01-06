@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 12:00:10 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 13:18:25 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_memcmp(const void *str1, const void *str2, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 void	*ft_memmove(void *dest, const void *src, size_t len);
 void	*ft_memset(void *str, int chr, size_t len);
+char	**ft_split(const char *str, char sep);
 char	*ft_strchr(char *str, int chr);
 char	*ft_strdup(const char *str);
 char	*ft_strjoin(const char *str1, const char *str2);
