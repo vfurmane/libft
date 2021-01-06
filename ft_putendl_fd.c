@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 14:58:39 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 15:09:46 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 17:53:26 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_putendl_fd(char *str, int fd)
 
 	i = 0;
 	while (str[i])
-		write(fd, &str[i], 1);
+		write(fd, &str[i++], 1);
 	write(fd, "\n", 1);
 }
