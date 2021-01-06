@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 11:30:34 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 12:00:10 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 int		ft_strncmp(const char *str1, const char *str2, size_t len);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 char	*ft_strrchr(char *str, int chr);
+char	*ft_strtrim(const char *str, const char *set);
 char	*ft_substr(const char *str, unsigned int start, size_t len);
 int		ft_strlen(const char *str);
 int		ft_tolower(int chr);
