@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 14:48:26 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 14:59:54 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	*ft_bzero(void *str, size_t len);
@@ -31,6 +32,7 @@ int		ft_memcmp(const void *str1, const void *str2, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 void	*ft_memmove(void *dest, const void *src, size_t len);
 void	*ft_memset(void *str, int chr, size_t len);
+void	ft_putchar_fd(char chr, int fd);
 char	**ft_split(const char *str, char sep);
 char	*ft_strchr(char *str, int chr);
 char	*ft_strdup(const char *str);
