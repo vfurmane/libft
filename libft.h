@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 14:25:07 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 14:48:26 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_strdup(const char *str);
 char	*ft_strjoin(const char *str1, const char *str2);
 size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
+char	*ft_strmapi(const char *str, char (*ft)(unsigned int, char));
 int		ft_strncmp(const char *str1, const char *str2, size_t len);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 char	*ft_strrchr(char *str, int chr);
