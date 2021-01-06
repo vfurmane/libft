@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 13:18:25 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/06 14:25:07 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_isalpha(int chr);
 int		ft_isascii(int chr);
 int		ft_isdigit(int chr);
 int		ft_isprint(int chr);
+char	*ft_itoa(int nbr);
 void	*ft_memccpy(void *dest, const void *src, int chr, size_t len);
 void	*ft_memchr(const void *str, int chr, size_t len);
 int		ft_memcmp(const void *str1, const void *str2, size_t len);
