@@ -6,7 +6,7 @@
 #    By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:23:33 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/07 11:10:26 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/07 11:18:39 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS		= $(addprefix ft_, atoi.c bzero.c calloc.c isalnum.c isalpha.c \
 			  strlcat.c strlcpy.c strlen.c strmapi.c strncmp.c strnstr.c \
 			  strrchr.c strtrim.c substr.c tolower.c toupper.c)
 OBJS		= $(SRCS:.c=.o)
-BON_SRCS	= $(addprefix ft_, lstadd_back.c lstadd_front.c lstclear.c lstdelone.c lstiter.c lstlast.c lstnew.c lstsize.c)
+BON_SRCS	= $(addprefix ft_, lstadd_back.c lstadd_front.c lstclear.c \
+			  lstdelone.c lstiter.c lstlast.c lstmap.c lstnew.c lstsize.c)
 BON_OBJS	= $(BON_SRCS:.c=.o)
 INCL		= .
 NAME		= libft.a
