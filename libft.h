@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/07 11:18:10 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/07 11:22:52 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ int					ft_strlen(const char *str);
 int					ft_tolower(int chr);
 int					ft_toupper(int chr);
 
-/* ================================= BONUS ================================== */
-
 typedef struct		s_list
 {
 	void			*content;
@@ -68,7 +66,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void *(*f)(void*));
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void*), 
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void*),
 					void (*del)(void*));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
