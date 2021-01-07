@@ -6,7 +6,7 @@
 #    By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:23:33 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/07 11:18:39 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/07 12:38:10 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,8 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 			$(AR) $@ $^
 
-bonus:		$(NAME) $(BON_OBJS)
-			$(AR) $^
+bonus:		all $(NAME) $(BON_OBJS)
+			$(AR) $(NAME) $(BON_OBJS)
 
 clean:
 			$(RM) $(OBJS) $(BON_OBJS)
