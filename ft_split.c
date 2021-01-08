@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 12:25:44 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 13:49:04 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/08 14:35:46 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ static char	*ft_strcdup(const char *str, char sep)
 	int		str_len;
 	char	*new_str;
 
-	str_len = ft_strlen(str);
+	str_len = 0;
+	while (str[str_len] && str[str_len] != sep)
+		str_len++;
 	if (!(new_str = malloc(sizeof(*new_str) * (str_len + 1))))
 		return (NULL);
 	i = 0;
