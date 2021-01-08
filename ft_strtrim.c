@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 11:50:07 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 12:19:46 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/08 10:51:22 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strtrim(const char *str, const char *set)
 		len -= set_len;
 	if (!(new_str = malloc(len * sizeof(*new_str))))
 		return (NULL);
-	printf("%d\n%d\n", len, set_len);
 	if (ft_strnstr(str, set, set_len) == str)
 		ft_strlcpy(new_str, str + set_len, len + 1);
 	else
