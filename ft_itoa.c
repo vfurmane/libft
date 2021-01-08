@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 14:12:41 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 14:35:29 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/08 12:42:54 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ static int	ft_count_digits(int nbr)
 
 char		*ft_itoa(int nbr)
 {
-	int		i;
-	int		len;
-	char	*str;
+	int				i;
+	int				len;
+	char			*str;
+	unsigned int	nb;
 
 	len = ft_count_digits(nbr);
 	if (!(str = malloc((len + 1) * sizeof(*str))))
@@ -44,14 +45,16 @@ char		*ft_itoa(int nbr)
 		return (str);
 	}
 	if (nbr < 0)
-		nbr *= -1;
+		nb = -nbr;
+	else
+		nb = nbr;
 	str[0] = '-';
 	i = len;
-	while (nbr)
+	while (nb)
 	{
 		i--;
-		str[i] = nbr % 10 + '0';
-		nbr /= 10;
+		str[i] = nb % 10 + '0';
+		nb /= 10;
 	}
 	str[len] = '\0';
 	return (str);
