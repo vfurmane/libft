@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/07 11:22:52 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/08 14:56:45 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void				ft_putendl_fd(char *str, int fd);
 void				ft_putnbr_fd(int nbr, int fd);
 void				ft_putstr_fd(char *str, int fd);
 char				**ft_split(const char *str, char sep);
-char				*ft_strchr(char *str, int chr);
+char				*ft_strchr(const char *str, int chr);
 char				*ft_strdup(const char *str);
 char				*ft_strjoin(const char *str1, const char *str2);
 size_t				ft_strlcat(char *dest, const char *src, size_t dest_size);

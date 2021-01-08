@@ -6,30 +6,41 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 11:50:07 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/08 10:51:22 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/08 15:37:58 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *str, const char *set)
+static int	ft_trimlen(const char *str, const char *set)
 {
-	int		len;
-	int		set_len;
+	int	i;
+	int	trim_len;
+
+	trim_len = ft_strlen(str);
+	while (ft_strchr(set, str[trim_len - 1]) != NULL && trim_len > 0)
+		trim_len--;
+	if (trim_len == 0)
+		return (0);
+	i = 0;
+	while (ft_strchr(set, str[i]) != NULL && str[i])
+		i++;
+	trim_len -= i;
+	return (trim_len);
+}
+
+char		*ft_strtrim(const char *str, const char *set)
+{
+	int		i;
+	int		trim_len;
 	char	*new_str;
 
-	len = ft_strlen(str);
-	set_len = ft_strlen(set);
-	if (ft_strnstr(str, set, set_len) == str)
-		len -= set_len;
-	if (ft_strnstr(str + 1, set, ft_strlen(str) - 1) ==
-			str + ft_strlen(str) - set_len)
-		len -= set_len;
-	if (!(new_str = malloc(len * sizeof(*new_str))))
+	trim_len = ft_trimlen(str, set);
+	if (!(new_str = malloc((trim_len + 1) * sizeof(*new_str))))
 		return (NULL);
-	if (ft_strnstr(str, set, set_len) == str)
-		ft_strlcpy(new_str, str + set_len, len + 1);
-	else
-		ft_strlcpy(new_str, str, len + 1);
+	i = 0;
+	while (ft_strchr(set, str[i]) != NULL && str[i])
+		i++;
+	ft_strlcpy(new_str, &str[i], trim_len + 1);
 	return (new_str);
 }
