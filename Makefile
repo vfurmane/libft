@@ -6,7 +6,7 @@
 #    By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:23:33 by vfurmane          #+#    #+#              #
-#    Updated: 2021/01/07 12:38:10 by vfurmane         ###   ########.fr        #
+#    Updated: 2021/01/09 19:56:39 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ BON_SRCS	= $(addprefix ft_, lstadd_back.c lstadd_front.c lstclear.c \
 BON_OBJS	= $(BON_SRCS:.c=.o)
 INCL		= .
 NAME		= libft.a
-CC			= gcc
+CC			= clang
 CFLAGS		= -Wall -Wextra -Werror
 AR			= ar -rcs
 RM			= rm -f
