@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 10:59:12 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/07 11:06:33 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/09 13:08:20 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	**dup_lst;
+	t_list	*next;
 	t_list	**initial_lst;
 
-	dup_lst = lst;
 	initial_lst = lst;
-	while (*dup_lst != NULL)
+	while (*lst != NULL)
 	{
-		(*del)(*dup_lst);
-		dup_lst = &(*lst)->next;
-		free(*lst);
+		next = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		lst = &next;
 	}
 	*initial_lst = NULL;
 }
