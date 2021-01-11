@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 19:35:23 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 11:30:27 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/11 18:55:55 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(const char *str, unsigned int start, size_t len)
 	char			*new_str;
 	unsigned int	i;
 
+	if (start >= (unsigned int)ft_strlen(str))
+		len = 0;
 	if (!(new_str = malloc((len + 1) * sizeof(*new_str))))
 		return (NULL);
 	i = 0;
