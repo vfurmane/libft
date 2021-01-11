@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 18:01:49 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 18:12:09 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/01/11 13:08:42 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_calloc(size_t len, size_t size)
 	size_t	total_size;
 
 	total_size = len * size;
-	if (9223372036854775807 / size < len)
-		return (NULL);
 	ptr = malloc(total_size);
+	if (ptr == NULL)
+		return (NULL);
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }
