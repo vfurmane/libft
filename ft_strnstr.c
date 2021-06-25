@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:48:04 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 18:12:39 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:14:55 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 	int	j;
 
 	if (!find || *find == '\0')
-		return ((char*)str);
+		return ((char *)str);
 	i = 0;
 	j = 0;
 	while (str[i] && i < (int)len)
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 		while (find[j] && str[i + j] == find[j] && i + j < (int)len)
 			j++;
 		if (!find[j])
-			return ((char*)&str[i]);
+			return ((char *)&str[i]);
 		i++;
 	}
 	return (NULL);

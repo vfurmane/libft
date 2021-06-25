@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:37:22 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/09 12:09:53 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:08:52 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int					ft_isdigit(int chr);
 int					ft_isprint(int chr);
 char				*ft_itoa(int nbr);
 void				*ft_memccpy(void *dest, const void *src, int chr,
-					size_t len);
+						size_t len);
 void				*ft_memchr(const void *str, int chr, size_t len);
 int					ft_memcmp(const void *str1, const void *str2, size_t len);
 void				*ft_memcpy(void *dest, const void *src, size_t len);
@@ -44,7 +44,7 @@ char				*ft_strjoin(const char *str1, const char *str2);
 size_t				ft_strlcat(char *dest, const char *src, size_t dest_size);
 size_t				ft_strlcpy(char *dest, const char *src, size_t dest_size);
 char				*ft_strmapi(const char *str,
-					char (*ft)(unsigned int, char));
+						char (*ft)(unsigned int, char));
 int					ft_strncmp(const char *str1, const char *str2, size_t len);
 char				*ft_strnstr(const char *str, const char *find, size_t len);
 char				*ft_strrchr(char *str, int chr);
@@ -54,7 +54,7 @@ int					ft_strlen(const char *str);
 int					ft_tolower(int chr);
 int					ft_toupper(int chr);
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -67,7 +67,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void*));
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void*),
-					void (*del)(void*));
+						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 

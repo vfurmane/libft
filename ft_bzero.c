@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:10:14 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 18:12:04 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:10:11 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_bzero(void *str, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char*)str)[i] = 0;
+		((char *)str)[i] = 0;
 		i++;
 	}
 	return (str);

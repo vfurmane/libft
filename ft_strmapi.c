@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 14:39:50 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 14:48:12 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:14:43 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strmapi(const char *str, char (*ft)(unsigned int, char))
 	char	*new_str;
 
 	len = ft_strlen(str);
-	if (!(new_str = malloc((len + 1) * sizeof(*new_str))))
+	new_str = malloc((len + 1) * sizeof(*new_str));
+	if (new_str == NULL)
 		return (NULL);
 	i = 0;
 	while (str[i])

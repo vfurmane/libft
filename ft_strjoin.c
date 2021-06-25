@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 20:07:08 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/06 11:30:19 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:24:28 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strjoin(const char *str1, const char *str2)
 
 	str1_len = ft_strlen(str1);
 	len = str1_len + ft_strlen(str2) + 1;
-	if (!(new_str = malloc(len * sizeof(*new_str))))
+	new_str = malloc(len * sizeof(*new_str));
+	if (new_str == NULL)
 		return (NULL);
 	i = 0;
 	while (i < str1_len)

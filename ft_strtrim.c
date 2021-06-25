@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 11:50:07 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/08 15:37:58 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:10:40 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,15 @@ static int	ft_trimlen(const char *str, const char *set)
 	return (trim_len);
 }
 
-char		*ft_strtrim(const char *str, const char *set)
+char	*ft_strtrim(const char *str, const char *set)
 {
 	int		i;
 	int		trim_len;
 	char	*new_str;
 
 	trim_len = ft_trimlen(str, set);
-	if (!(new_str = malloc((trim_len + 1) * sizeof(*new_str))))
+	new_str = malloc((trim_len + 1) * sizeof(*new_str));
+	if (new_str == NULL)
 		return (NULL);
 	i = 0;
 	while (ft_strchr(set, str[i]) != NULL && str[i])

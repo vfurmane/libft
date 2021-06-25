@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:14:39 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 10:37:26 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:08:03 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memccpy(void *dest, const void *src, int chr, size_t len)
 	i = 0;
 	while (i < (int)len)
 	{
-		((char*)dest)[i] = ((char*)src)[i];
-		if (((char*)src)[i] == (unsigned char)chr)
-			return (&((char*)dest)[i + 1]);
+		((char *)dest)[i] = ((char *)src)[i];
+		if (((char *)src)[i] == (unsigned char)chr)
+			return (&((char *)dest)[i + 1]);
 		i++;
 	}
 	return (NULL);

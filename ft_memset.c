@@ -6,7 +6,7 @@
 /*   By: vfurmane <vfurmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:30:38 by vfurmane          #+#    #+#             */
-/*   Updated: 2021/01/05 18:12:12 by vfurmane         ###   ########.fr       */
+/*   Updated: 2021/06/25 23:09:13 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *str, int chr, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char*)str)[i] = chr;
+		((char *)str)[i] = chr;
 		i++;
 	}
 	return (str);
